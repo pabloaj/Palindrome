@@ -3,6 +3,7 @@ const app = express();
 const port = 3001;
 const cors = require('cors')
 app.use(cors())
+app.options('*', cors());
 const iechoApi = require('./routers/apihost/iecho');
 
 

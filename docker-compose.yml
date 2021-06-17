@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  api:
+    image: apiv1
+    restart: always
+    build: ./Api
+    ports: 
+      - "3001:3001"
+  client:
+    image: frontv1
+    restart: always
+    build: ./fornt-iecho
+    ports:
+      - "3000:3000"
+    depends_on:  
+      - api
+    
+

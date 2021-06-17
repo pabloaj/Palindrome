@@ -10,8 +10,7 @@ function App() {
   const[txtInput1,setTextInput1] = useState("");
   const[txtInput2,setTextInput2] = useState("");
   const[txtInput3,setTextInput3] = useState("");
-  console.log(env.API_host)
-  const serviceUrl = env.API_host+'/apihost/iecho/'
+  const serviceUrl = 'http://localhost:3001/apihost/iecho/'
   const onClick  = ()=>{
     const params ={text:txtInput}
     axios.get(serviceUrl,{params})
